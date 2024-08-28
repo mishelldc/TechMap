@@ -78,10 +78,10 @@ button:hover {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
+    right: 0;
     top: 0;
-    width: 50%;
-    height: 50%;
+    width: 35%;  /* Ahora el modal ocupa un 35% del ancho de la pantalla */
+    height: 100%;
     overflow: auto;
     background-color: rgba(203, 115, 115, 0.5);
     backdrop-filter: blur(5px);
@@ -89,11 +89,10 @@ button:hover {
 
 #modal .modal-content {
     background-color: #ffc0cb;
-    margin: 10% auto;
+    margin: 20px;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
+    width: 90%; /* Ajustado para llenar el ancho del modal */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.5s;
@@ -166,6 +165,31 @@ button:hover {
 #downloadBtn:hover {
     background-color: #ff1493;
 }
+
+.main-content {
+    position: relative;
+}
+
+#overlay-container {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: none; /* Oculto por defecto */
+}
+
+#text-cpu-socket { top: 50px; left: 150px; }
+#text-ram-slots { top: 100px; left: 200px; }
+#text-power-connector-large { top: 150px; left: 50px; }
+#text-power-connector-small { top: 200px; left: 250px; }
+#text-sata-ports { top: 250px; left: 300px; }
+#text-pci-slots { top: 300px; left: 100px; }
+#text-rear-ports { top: 350px; left: 400px; }
 
 /* Adaptabilidad para teléfonos móviles */
 @media (max-width: 768px) {
