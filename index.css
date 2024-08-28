@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #B4B4B8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.header button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content {
+    width: 85%; 
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.main-content img {
+    width: 50%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 50px); 
+}
+
+.sidebar {
+    background-color: #EEEDEB;
+    width: 15%; 
+    padding: 20px;
+}
+
+button {
+    display: block; 
+    margin-bottom: 10px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    background-color: #DDDDDD; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+button:last-child {
+    margin-bottom: 0; 
+}
+
+button:hover {
+    background-color: #EBE3D5; 
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgba(203, 115, 115, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+#modal .modal-content {
+    background-color: #ffc0cb;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+#modal-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+#modal-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: black;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#modal-characteristics {
+    list-style-type: none;
+    padding-left: 0;
+    color: #333;
+    text-align: left;
+}
+
+#modal-characteristics li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#downloadBtn {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+#downloadBtn:hover {
+    background-color: #ff1493;
+}
+
+/* Adaptabilidad para teléfonos móviles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header nav a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .header button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content img {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #modal {
+        width: 90%;
+        height: auto;
+        top: 20%;
+        left: 5%;
+    }
+
+    #modal .modal-content {
+        width: 100%;
+        padding: 15px;
+        margin: 5% auto;
+    }
+}

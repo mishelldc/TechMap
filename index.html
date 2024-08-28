@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEJOR</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="lado.css">
+    <link rel="stylesheet" href="header.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>TechMap</h1>
+        <nav>
+            <a href="#">PC</a>
+            <a href="#">GPU</a>
+            <a href="#">CPU</a>
+            <a href="#">Fuentes de poder</a>
+            <a href="#">Placa madre</a>
+        </nav>
+        <button>Github</button>
+
+        
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <button id="cpu-socket" class="btnsck">Socket CPU</button>
+        <button id="ram-slots" class="btnrm">RAM</button>
+        <button id="power-connector-large" class="btnCG">Conector de alimentación grande</button>
+        <button id="power-connector-small" class="buttonCP">Conector de alimentación pequeño</button>
+        <button id="sata-ports" class="sata">Puertos SATA</button>
+        <button id="pci-slots" class="puertos">Puertos PCI</button>
+        <button id="rear-ports" class="puerto">Puertos traseros</button>
+        </aside>
+        <main class="main-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Asus_A8N-VM_CSM_Rev1.10G_20060626a.jpg" alt="Imagen principal">
+        </main>
+        <div id="modal">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <ul id="modal-characteristics"></ul>
+            <button id="downloadBtn">Descargar</button> <!-- Botón de descarga dentro del modal -->
+        </div>
+        
+    
+    </div>
+    <script src="lado.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="header.js"></script>
+
+</body>
+</html>
