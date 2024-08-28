@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEJOR</title>
+    <title>TechMap</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="lado.css">
     <link rel="stylesheet" href="header.css">
-
 </head>
 <body>
     <header class="header">
@@ -19,22 +17,29 @@
             <a href="#">Fuentes de poder</a>
             <a href="#">Placa madre</a>
         </nav>
-        <button>Github</button>
-
-        
+        <a href="https://github.com/mishelldc/TechMap.git" class="github-btn">Github</a>
     </header>
     <div class="container">
         <aside class="sidebar">
             <button id="cpu-socket" class="btnsck">Socket CPU</button>
-        <button id="ram-slots" class="btnrm">RAM</button>
-        <button id="power-connector-large" class="btnCG">Conector de alimentación grande</button>
-        <button id="power-connector-small" class="buttonCP">Conector de alimentación pequeño</button>
-        <button id="sata-ports" class="sata">Puertos SATA</button>
-        <button id="pci-slots" class="puertos">Puertos PCI</button>
-        <button id="rear-ports" class="puerto">Puertos traseros</button>
+            <button id="ram-slots" class="btnrm">RAM</button>
+            <button id="power-connector-large" class="btnCG">Conector de alimentación grande</button>
+            <button id="power-connector-small" class="buttonCP">Conector de alimentación pequeño</button>
+            <button id="sata-ports" class="sata">Puertos SATA</button>
+            <button id="pci-slots" class="puertos">Puertos PCI</button>
+            <button id="rear-ports" class="puerto">Puertos traseros</button>
         </aside>
         <main class="main-content">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Asus_A8N-VM_CSM_Rev1.10G_20060626a.jpg" alt="Imagen principal">
+            <div id="overlay-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Asus_A8N-VM_CSM_Rev1.10G_20060626a.jpg" alt="Imagen principal">
+                <span id="text-cpu-socket" class="overlay-text" style="display: none;">Socket CPU</span>
+                <span id="text-ram-slots" class="overlay-text" style="display: none;">RAM</span>
+                <span id="text-power-connector-large" class="overlay-text" style="display: none;">Conector de alimentación grande</span>
+                <span id="text-power-connector-small" class="overlay-text" style="display: none;">Conector de alimentación pequeño</span>
+                <span id="text-sata-ports" class="overlay-text" style="display: none;">Puertos SATA</span>
+                <span id="text-pci-slots" class="overlay-text" style="display: none;">Puertos PCI</span>
+                <span id="text-rear-ports" class="overlay-text" style="display: none;">Puertos traseros</span>
+            </div>
         </main>
         <div id="modal">
             <span class="close">&times;</span>
@@ -43,12 +48,9 @@
             <ul id="modal-characteristics"></ul>
             <button id="downloadBtn">Descargar</button> <!-- Botón de descarga dentro del modal -->
         </div>
-        
-    
     </div>
     <script src="lado.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="header.js"></script>
-
 </body>
 </html>
