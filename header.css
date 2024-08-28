@@ -119,7 +119,18 @@ body {
 #downloadBtn:hover {
     background-color: #ff1493;
 }
-
+.github-btn {
+    
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .github-btn:hover {
+    background-color: #555;
+  }
 /* Adaptabilidad para teléfonos móviles */
 @media (max-width: 768px) {
     .header {
